@@ -1,4 +1,7 @@
 package leetCode.binaryTree;
+
+import leetCode.TreeNode;
+
 //相同的树
 public class SameTree100 {
     public boolean isSameTree(TreeNode p, TreeNode q) {

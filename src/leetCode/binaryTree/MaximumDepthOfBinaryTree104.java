@@ -1,6 +1,8 @@
 package leetCode.binaryTree;
 
-import java.util.Stack;
+import leetCode.TreeNode;
+
+import java.util.*;
 
 //二叉树的最大深度
 public class MaximumDepthOfBinaryTree104 {
@@ -33,6 +35,27 @@ public class MaximumDepthOfBinaryTree104 {
                 node.right.val = node.val + 1;
                 treeNodeStack.push(node.right);
             }
+        }
+        return height;
+    }
+
+    //通过队列实现：层序遍历BFS
+    public int maxDepth3(TreeNode root) {
+        if (root == null){
+            return 0;
+        }
+
+        int height = 0;
+        Deque<TreeNode> deque = new LinkedList<>();
+        deque.add(root);
+        while(!deque.isEmpty()){
+            int size = deque.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = deque.remove();
+                if(node.left != null) deque.add(node.left);
+                if(node.right != null) deque.add(node.right);
+            }
+            height++;
         }
         return height;
     }

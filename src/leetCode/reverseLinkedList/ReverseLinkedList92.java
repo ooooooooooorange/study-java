@@ -1,4 +1,7 @@
 package leetCode.reverseLinkedList;
+
+import leetCode.ListNode;
+
 //反转链表Ⅱ
 public class ReverseLinkedList92 {
     //通过在head前加一个哑节点，来规避特殊情况的处理

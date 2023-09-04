@@ -1,6 +1,6 @@
 package leetCode.fastSlowPoint;
 
-import leetCode.reverseLinkedList.ListNode;
+import leetCode.ListNode;
 
 //链表的中间结点
 public class MiddleOfTheLinkedList876 {

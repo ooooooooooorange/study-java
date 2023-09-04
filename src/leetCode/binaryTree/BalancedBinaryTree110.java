@@ -1,4 +1,7 @@
 package leetCode.binaryTree;
+
+import leetCode.TreeNode;
+
 //平衡二叉树
 public class BalancedBinaryTree110 {
     public boolean isBalanced(TreeNode root) {

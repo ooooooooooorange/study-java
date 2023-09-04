@@ -1,4 +1,4 @@
-package leetCode.binaryTree;
+package leetCode;
 
 
 public class TreeNode {

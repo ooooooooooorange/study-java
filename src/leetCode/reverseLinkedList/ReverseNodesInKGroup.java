@@ -1,5 +1,7 @@
 package leetCode.reverseLinkedList;
 
+import leetCode.ListNode;
+
 //K 个一组翻转链表
 public class ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {

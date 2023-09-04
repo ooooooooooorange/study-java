@@ -1,6 +1,6 @@
 package leetCode.fastSlowPoint;
 
-import leetCode.reverseLinkedList.ListNode;
+import leetCode.ListNode;
 
 //环形链表Ⅱ
 public class LinkedListCycle142 {

@@ -1,6 +1,6 @@
 package leetCode.fastSlowPoint;
 
-import leetCode.reverseLinkedList.ListNode;
+import leetCode.ListNode;
 
 //重排链表
 public class ReorderList143 {

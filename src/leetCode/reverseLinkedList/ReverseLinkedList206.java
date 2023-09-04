@@ -1,4 +1,7 @@
 package leetCode.reverseLinkedList;
+
+import leetCode.ListNode;
+
 //反转链表
 public class ReverseLinkedList206 {
     public ListNode reverseList(ListNode head) {

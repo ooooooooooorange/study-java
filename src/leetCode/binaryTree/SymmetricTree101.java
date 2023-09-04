@@ -1,4 +1,7 @@
 package leetCode.binaryTree;
+
+import leetCode.TreeNode;
+
 //对称二叉树
 public class SymmetricTree101 {
     public boolean isSymmetric(TreeNode root) {
