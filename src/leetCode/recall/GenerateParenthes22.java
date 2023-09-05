@@ -10,7 +10,7 @@ import java.util.List;
  * @Date: 2023/9/4 22:05
  */
 //括号生成
-public class Description22 {
+public class GenerateParenthes22 {
 
     List<String> result = new ArrayList<>();
 
@@ -77,7 +77,7 @@ public class Description22 {
     }
 
     public static void main(String[] args) {
-        Description22 description22 = new Description22();
+        GenerateParenthes22 description22 = new GenerateParenthes22();
         List<String> strings = description22.generateParenthesis(3);
         System.out.println(Arrays.toString(strings.toArray()));
     }
