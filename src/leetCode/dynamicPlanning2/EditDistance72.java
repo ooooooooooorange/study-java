@@ -68,7 +68,7 @@ public class EditDistance72 {
 //            f[(i + 1) % 2][0] = i + 1;
 //            for (int j = 0; j < m ; j++) {
 //                if(s[i] == t[j]){
-//                    f[(i + 1) % 2][j + 1] = f[i  % 2][j];
+//                    f[(i + 1) % 2][j + 1] = f[i % 2][j];
 //                } else {
 //                    f[(i + 1) % 2][j + 1] = Math.min(Math.min(f[i % 2][j + 1], f[(i + 1) % 2][j]), f[i % 2][j]) + 1;
 //                }
