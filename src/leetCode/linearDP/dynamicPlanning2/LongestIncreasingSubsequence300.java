@@ -1,7 +1,6 @@
-package leetCode.dynamicPlanning2;
+package leetCode.linearDP.dynamicPlanning2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

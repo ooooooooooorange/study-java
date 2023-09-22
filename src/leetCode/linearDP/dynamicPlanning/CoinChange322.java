@@ -1,4 +1,4 @@
-package leetCode.dynamicPlanning;
+package leetCode.linearDP.dynamicPlanning;
 
 import java.util.Arrays;
 

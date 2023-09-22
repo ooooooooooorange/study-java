@@ -1,4 +1,4 @@
-package leetCode.stateMachine;
+package leetCode.linearDP.stateMachine;
 
 import java.util.Arrays;
 
