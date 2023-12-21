@@ -18,16 +18,16 @@ public class CloneUtil {
     @SuppressWarnings("unchecked")
     public static <T extends Serializable> T deepClone(T obj){
         T cloneObj = null;
-        //写入字节流
         try {
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            ObjectOutputStream obs = new ObjectOutputStream(out);
+            //将原始对象写入字节流
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream obs = new ObjectOutputStream(bos);
             obs.writeObject(obj);
             obs.close();
 
             //分配内存，写入原始对象，生成新对象
-            ByteArrayInputStream ios = new ByteArrayInputStream(out.toByteArray());
-            ObjectInputStream ois = new ObjectInputStream(ios);
+            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bis);
             //返回生成的新对象
             cloneObj = (T) ois.readObject();
             ois.close();
@@ -42,9 +42,29 @@ public class CloneUtil {
      * @param list 要拷贝的List(对象需要实现序列化Serializable)
      * @return 深拷贝后的新List
      */
-    public static <T extends Serializable> List<T> deepClone(List<T> list){
-        List<T> cloneList = new ArrayList<>();
-        list.forEach(item -> cloneList.add(deepClone(item)));
+//    public static <T extends Serializable> List<T> deepClone(List<T> list){
+//        List<T> cloneList = new ArrayList<>();
+//        list.forEach(item -> cloneList.add(deepClone(item)));
+//        return cloneList;
+//    }
+    public static <T> List<T> deepClone(List<T> list) {
+        List<T> cloneList = null;
+        try {
+            //将原始对象写入字节流
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream obs = new ObjectOutputStream(bos);
+            obs.writeObject(list);
+            obs.close();
+
+            //分配内存，写入原始对象，生成新对象
+            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+            ObjectInputStream ois = new ObjectInputStream(bis);
+            //返回生成的新对象
+            cloneList = (List<T>) ois.readObject();
+            ois.close();
+        }catch(IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
         return cloneList;
     }
 }
