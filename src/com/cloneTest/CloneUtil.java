@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * @Description: 深拷贝工具类
+ * @Description: 深拷贝工具类（拷贝到的对象需要实现Serializable）
  * @Author: xuzixin9
  * @Date: 2023/12/21 21:57
  */
